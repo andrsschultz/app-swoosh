@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dFs-B6-bur">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,6 +49,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="dFs-B6-bur" kind="show" id="MVP-yp-NZ7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ONGOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2y-Lf-sny">
                                 <rect key="frame" x="67.5" y="210" width="240" height="32"/>
@@ -163,14 +166,27 @@
                                     <constraint firstAttribute="height" constant="50" id="t1U-U0-vM3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="GET STARTED">
+                                <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5K-EA-CuT">
+                                <rect key="frame" x="0.0" y="30" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="5ws-P4-gi1"/>
+                                    <constraint firstAttribute="height" constant="30" id="g0h-dS-qxH"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="backButton"/>
+                                <connections>
+                                    <segue destination="G5A-hg-FYQ" kind="unwind" unwindAction="unwindFromLeagueViewControllerWithUnwindSegue:" id="9XY-uQ-e5p"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5VU-kh-AOS" firstAttribute="leading" secondItem="L2c-R2-1R3" secondAttribute="leading" id="0gK-n2-KLp"/>
+                            <constraint firstItem="g5K-EA-CuT" firstAttribute="leading" secondItem="L2c-R2-1R3" secondAttribute="leading" id="42H-IX-7A9"/>
+                            <constraint firstItem="g5K-EA-CuT" firstAttribute="top" secondItem="9Wa-jJ-rPd" secondAttribute="topMargin" constant="10" id="5Ga-05-ytB"/>
                             <constraint firstItem="L2c-R2-1R3" firstAttribute="bottom" secondItem="8sC-TB-MsF" secondAttribute="bottom" constant="20" id="7ke-ng-Ekl"/>
                             <constraint firstItem="3Ck-YB-EJI" firstAttribute="top" secondItem="5VU-kh-AOS" secondAttribute="bottom" constant="50" id="E1S-Vu-jH3"/>
                             <constraint firstItem="L2c-R2-1R3" firstAttribute="trailing" secondItem="5VU-kh-AOS" secondAttribute="trailing" id="F1Y-bF-7EH"/>
@@ -188,6 +204,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgM-Vd-Ofg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="G5A-hg-FYQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="982" y="134"/>
         </scene>
@@ -285,6 +302,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
