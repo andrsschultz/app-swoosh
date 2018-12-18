@@ -58,8 +58,8 @@
 		45A4C7E121C9263C00DEB5BE /* app-swoosh */ = {
 			isa = PBXGroup;
 			children = (
-				45A4C7F721C92B7A00DEB5BE /* VIEWS */,
 				45A4C7E221C9263C00DEB5BE /* AppDelegate.swift */,
+				45A4C7F721C92B7A00DEB5BE /* VIEWS */,
 				45A4C7E421C9263C00DEB5BE /* ViewController.swift */,
 				45A4C7E621C9263C00DEB5BE /* Main.storyboard */,
 				45A4C7EC21C9263E00DEB5BE /* Assets.xcassets */,
